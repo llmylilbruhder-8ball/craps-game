@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craps Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 CRAPS GAME 🎲</h1>
+        
+        <!-- Balance Section -->
+        <div class="balance-section">
+            <h2>Your Balance: $<span id="balance">100</span></h2>
+            <p id="status">Welcome! Place your bet and roll the dice.</p>
+        </div>
+
+        <!-- Betting Section -->
+        <div class="betting-section">
+            <h3>Place Your Bet</h3>
+            <div class="bet-input-group">
+                <input type="number" id="betAmount" placeholder="Enter bet amount" min="1" max="100" value="10">
+                <button id="placeBetBtn" class="btn btn-bet">Place Bet: $10</button>
+            </div>
+            <p id="betStatus">Current Bet: $0</p>
+        </div>
+
+        <!-- Dice Display Section -->
+        <div class="dice-section">
+            <h3>Your Roll</h3>
+            <div class="dice-container">
+                <div class="dice" id="dice1">🎲</div>
+                <div class="dice" id="dice2">🎲</div>
+            </div>
+            <h2 id="total">Total: 0</h2>
+        </div>
+
+        <!-- Game Info Section -->
+        <div class="info-section">
+            <h3>Game Info</h3>
+            <p>Round: <span id="round">1</span></p>
+            <p>Point: <span id="point">None</span></p>
+            <p id="gamePhase">Come Out Roll - Roll 7 or 11 to WIN, 2/3/12 to LOSE</p>
+        </div>
+
+        <!-- Roll Button -->
+        <button id="rollBtn" class="btn btn-roll">Roll Dice</button>
+
+        <!-- Result Display -->
+        <div class="result-section" id="resultSection" style="display: none;">
+            <h2 id="resultMessage"></h2>
+            <p id="resultDetails"></p>
+        </div>
+
+        <!-- Reset Game -->
+        <button id="resetBtn" class="btn btn-reset">Reset Game</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
